@@ -1,0 +1,20 @@
+﻿<form method="get" action="TheResultPage">
+    <h4>Please fill the form to register!</h4>
+    <p>Name:</p>
+    <input pattern="^[a-zA-Z]*" oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text" name="Name" placeholder="Name" maxlength="20" required>
+
+    <p>Price:</p>
+    <input type="number" step="0.01" name="Price" placeholder="Price" max="150" min="1" required />
+    <p>Quantity:</p>
+    <input type="number" name="Quantity" min="1" max="1000" placeholder="Quantity" required />
+    <p>Description:</p>
+    <input pattern="[a-zA-Z]*" oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text" name="Description" placeholder="Description" maxlength="2000" required>
+
+
+
+    <input type="submit" />
+</form>
+<p> @ViewBag.Name</p>
+<p> @ViewBag.Price</p>
+<p>@ViewBag.Quantity</p>
+<p>@ViewBag.Description</p>
